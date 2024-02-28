@@ -1,0 +1,10 @@
+{# templates/bundles/EasyAdminBundle/crud/list_actions.html.twig #}
+{% extends '@!EasyAdmin/layout.html.twig' %}
+{% block list_action %}
+
+    <div class="btn-group" role="group" aria-label="Actions">
+        <a href="{{ show_route|raw }}" class="btn" title="{{ 'show'|trans }}" data-controller="tooltip">{{ 'show'|trans }}</a>
+        <a href="{{ edit_route|raw }}" class="btn" title="{{ 'edit'|trans }}" data-controller="tooltip">{{ 'edit'|trans }}</a>
+        <a href="{{ delete_route|raw }}" class="btn" title="{{ 'delete'|trans }}" data-controller="tooltip" data-confirm="{{ 'delete_confirmation'|trans({ '%entity_name%': _entity_config.vars.entity.name }) }}">{{ 'delete'|trans }}</a>
+    </div>
+{% endblock %}
